@@ -1,11 +1,14 @@
-# COMNUM
+# COMNUMFIP
 
-Comnum est un module Python pour les TP de communications numériques à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
+**Comnumfip** est un module Python pour les TP de communications numériques
+à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
+Il est associé au cours de [Communications numériques](https://vincmazet.github.io/comnum/).
 
 
 ## Installation
 
-Téléchargez
+Téléchargez le code en cliquant sur le bouton _Code_ ci-dessus, puis _Download ZIP_.
+Décompressez les fichiers dans votre dossier de travail.
 
 
 ## Documentation
@@ -13,21 +16,18 @@ Téléchargez
 
 ### eyediag
 
-`eyediag(t, x, T, alpha=.5)`
+`eyediag(t, x, T, alpha=.5, color="tab:blue")`
 
 Diagramme de l'oeil.
 
 Entrées :
-> **t** (array) : temps
-> 
-> **x** (array) : signal
-> 
-> **T** (scalar) : durée d'un symbole
-> 
-> **alpha** (scalar) : transparence (0,5 par défaut)
+* **t** (array) : temps
+* **x** (array) : signal
+* **T** (scalar) : durée d'un symbole
+* **alpha** (scalar) : transparence (0,5 par défaut)
 
 Sortie :
-> aucune
+* aucune
 
 
 ### randmary
@@ -105,5 +105,5 @@ Sorties :
 ## Licence
 
 Ce programme est distribué sous licence CeCILL-B (www.cecill.info).
-Copyright Université de Strasbourg 2013-2021 (2021-03-23)
-Contributeur : vincent.mazet@unistra.fr
+Copyright Université de Strasbourg 2021.
+Contributeur : vincent.mazet@unistra.fr.
