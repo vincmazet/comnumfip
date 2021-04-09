@@ -327,9 +327,10 @@ def mod_rrc(m, V, T, a):
     Modulation NRZ en racine de cosinus surélevé
     
     Entrées :
-    m (array)    : séquence binaire
-    V (scalaire) : amplitude de la forme d'onde
-    T (scalaire) : durée de la forme d'onde
+    m (array)  : séquence binaire
+    V (scalar) : amplitude de la forme d'onde
+    T (scalar) : durée de la forme d'onde
+    a (scalar) : coefficient de retombée (roll-off factor)
     
     Sorties :
     t (array) : vecteur temps

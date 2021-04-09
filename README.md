@@ -30,19 +30,34 @@ Sortie :
 * aucune
 
 
+### rrc
+
+`y = rrc(t, V, a)`
+    
+Impulsion en racine de cosinus surélevé (_root raised cosine_),
+pour une durée de symbole égale à 1.
+
+Entrées :
+* **t** (array)  : temps
+* **V** (scalar) : amplitude de l'impulsion
+* **a** (scalar) : facteur de retombée (_roll-off factor_)
+    
+Sortie :
+* **y** (array) : impulsion en racine de cosinus surélevé
+
+
 ### randmary
 
-`randmary(N,p)`
+`c = randmary(N,p)`
 
 Génération d'une séquence M-aire.
 
 Entrées :
-> N (scalar) : taille de la séquence (nombre de symboles)
->
-> P (array)   : probabilité des symboles (sa taille correspond à la taille de l'alphabet)
+* **N** (scalar) : taille de la séquence (nombre de symboles)
+* **P** (array)   : probabilité des symboles (sa taille correspond à la taille de l'alphabet)
 
 Sortie :
-> c (array) : séquence aléatoire M-aire où M = len(P).
+* **c** (array) : séquence aléatoire M-aire où M = len(P).
 
 Exemples :
 
@@ -60,46 +75,104 @@ c3 = randmary(10,np.ones(4)/4)
 
 ### bin2mary
 
-`bin2mary(x,M)`
+`y = bin2mary(x,M)`
 
 Convertit une séquence binaire en séquence M-aire.
 Si la taille de x n'est pas multiple de log2(M), des "0" sont rajoutés à la fin de x.
 
 Entrées :
-> x (array)  : séquence binaire
->
-> M (scalar) : taille de l'alphabet de la séquence traduite (M est une puissance de 2)
+* **x** (array)  : séquence binaire
+* **M** (scalar) : taille de l'alphabet de la séquence traduite (M est une puissance de 2)
     
 Sortie :
-> y (array) : séquence M-aire
+* **y** (array) : séquence M-aire
 
 
 
 ### mod_a, mob_b, mod_c, mod_d, mod_e
 
-`mod_a(x, v, d)`
+`t, x = mod_a(m, V, d)`
 
-`mod_b(x, v, d)`
+`t, x = mod_b(m, V, d)`
 
-`mod_c(x, v, d)`
+`t, x = mod_c(m, V, d)`
 
-`mod_d(x, v, d)`
+`t, x = mod_d(m, V, d)`
 
-`mod_e(x, v, d)`
+`t, x = mod_e(m, V, d)`
 
 Modulations mystères A, B, C, D et E.
 
 Entrées :
-> x (array)    : séquence binaire
->
-> v (scalaire) : amplitude de la forme d'onde
->
-> d (scalaire) : durée de la forme d'onde
+* **m** (array)    : séquence binaire
+* **V** (scalaire) : amplitude de la forme d'onde
+* **d** (scalaire) : durée de la forme d'onde
     
 Sorties :
-> t (array) : vecteur temps
->
-> y (array) : signal modulé
+* **t** (array) : vecteur temps
+* **x** (array) : signal modulé
+
+
+### mod_rrc
+
+`t, x = mod_rrc(m, V, T, a)`
+
+Modulation NRZ avec une forme d'onde en racine de cosinus surélevé.
+
+Entrées :
+* **m** (array)  : séquence binaire
+* **V** (scalar) : amplitude de la forme d'onde
+* **T** (scalar) : durée de la forme d'onde
+* **a** (scalar) : coefficient de retombée (_roll-off factor_)
+    
+Sorties :
+* **t** (array) : vecteur temps
+* **x** (array) : signal modulé
+
+
+### channel
+
+`y = channel(x,fc,s,T)`
+    
+Simule un canal de transmission en renvoyant le signal $y = x*g + b$ en sortie du canal,
+où $g$ est le réponse impulsionnelle d'un filtre passe-bas, $b$ un bruit blanc gaussien et $*$ représente la convolution.
+
+Entrées :
+* **x** (array)   : signal émis
+* **fc** (scalar) : fréquence de coupure du filtre g
+* **s** (scalar)  : écart-type du bruit b
+* **T** (scalar)  : durée d'un bit
+
+Sortie :
+* **y** (array) : signal transmis via le canal
+
+
+### rleenc
+
+`code = rleenc(msg)`
+
+Compression RLE (_run length encoding_).
+
+Entrée :
+* **msg** (array) : séquence de symboles à compresser
+
+Sortie :
+* **code** (array) : séquence compressée en RLE
+
+
+### sample_and_threshold
+
+`y = sample_and_threshold(x, T, S)`
+
+Échantillonne à la période T et compare au seuil S le signal x, pour retourner une séquence binaire
+
+Entrées :
+* **x** (array)  : signal
+* **T** (scalar) : période d'échantillonnage (= durée d'un bit)
+* **S** (scalar) : seuil à appliquer
+
+Sortie :
+* **y** (array) : séquence binaire
 
 
 ## Licence
