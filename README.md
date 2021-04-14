@@ -104,7 +104,7 @@ Sortie :
 Modulations mystères A, B, C, D et E.
 
 Entrées :
-* **m** (array)    : séquence binaire
+* **m** (array)    : séquence binaire (hexadécimale `mod_e`)
 * **V** (scalaire) : amplitude de la forme d'onde
 * **d** (scalaire) : durée de la forme d'onde
     
