@@ -339,7 +339,7 @@ def mod_rrc(m, V, T, a):
     
     N = len(m)
     L = 100
-    m = 2*m - 1
+    m = 2*np.array(m) - 1
     t = np.arange(L*N)/L*T
     x = np.zeros(L*N)
     for n in range(N):
