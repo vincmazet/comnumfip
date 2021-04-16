@@ -4,6 +4,8 @@
 à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
 Il est associé au cours de [Communications numériques](https://vincmazet.github.io/comnum/).
 
+Il est associé aux fichiers nécessaire pour effectuer les TP de ce cours.
+
 
 ## Installation
 
