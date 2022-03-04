@@ -1,8 +1,8 @@
 """
-COMNUM - Module Python pour les communications numériques à Télécom Physique Strasbourg.
+COMNUMFIP - Module Python pour les communications numériques à Télécom Physique Strasbourg (spécifiquement pour la formation FIP EII).
 
 Ce programme est distribué sous licence CeCILL-B (www.cecill.info).
-Copyright Université de Strasbourg 2013-2021 (2021-04-09)
+Copyright Université de Strasbourg 2013-2022 (2022-03-04)
 Contributeur : vincent.mazet@unistra.fr
 """
 
@@ -199,7 +199,7 @@ def mod_b(m, V, d):
     N = len(m)
     x = np.zeros(100*N)
     t = np.arange(100)*d/100
-    z = V * np.cos(2*np.pi*4*t)
+    z = V * np.cos(2*np.pi*4/d*t)
 
     for n in range(N):
         i = 100*n + np.arange(100)
@@ -288,7 +288,7 @@ def mod_e(m, V, d):
     x (array) : signal modulé
     """
     
-    f = 4
+    f = 4/d
     N = len(m)
     x = np.zeros(100*N)
     t = np.arange(100)*d/100
