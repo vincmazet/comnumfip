@@ -1,6 +1,7 @@
 # COMNUMFIP
 
-<font color="ffa500"><strong>version 2022.03.22</strong></font>
+![GitHub release](https://img.shields.io/github/v/release/vincmazet/comnumfip)
+
 
 **Comnumfip** est un module Python pour les TP de communications numériques
 à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
@@ -138,8 +139,8 @@ Sorties :
 
 `y = channel(x,fc,s,T)`
     
-Simule un canal de transmission en renvoyant le signal $y = x*g + b$ en sortie du canal,
-où $g$ est le réponse impulsionnelle d'un filtre passe-bas, $b$ un bruit blanc gaussien et $*$ représente la convolution.
+Simule un canal de transmission en renvoyant le signal _y = x*g + b_ en sortie du canal,
+où _g_ est le réponse impulsionnelle d'un filtre passe-bas, _b_ un bruit blanc gaussien et _*_ représente la convolution.
 
 Entrées :
 * **x** (array)   : signal émis
