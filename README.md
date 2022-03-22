@@ -1,5 +1,7 @@
 # COMNUMFIP
 
+<font color="ffa500"><strong>version 2022.03.22</strong></font>
+
 **Comnumfip** est un module Python pour les TP de communications numériques
 à [Télécom Physique Strasbourg](http://www.telecom-physique.fr/).
 Il est associé au cours de [Communications numériques](https://vincmazet.github.io/comnum/).
@@ -161,6 +163,33 @@ Entrée :
 Sortie :
 * **code** (array) : séquence compressée en RLE
 
+Exemple :
+
+```
+from skimage.io import imread
+mg = ioimread("image.png")       # Charge l'image image.png
+code = rleenc(img.ravel())       # .ravel() permet de vectoriser l'image
+                                 # pour en faire un tableau à une seule dimension
+```
+
+### rledec
+
+Décompression RLE (_run length encoding_).
+
+Entrée :
+* **code** (array) : séquence compressée en RLE
+
+Sortie :
+* **msg** (array) : séquence de symboles décompressée
+
+Exemple :
+
+```
+from numpy import reshape
+msg = rledec(code)               # Effectue la décompression RLE
+img = reshape(msg, (M,N))        # Si c'est une image qui est attendue,
+                                 # transforme la séquence msg en image de taille M×N
+```
 
 ### sample_and_threshold
 

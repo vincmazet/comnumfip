@@ -1,4 +1,4 @@
-Copyright Université de Strasbourg (contributeur : Vincent Mazet), 2021
+Copyright Université de Strasbourg (contributeur : Vincent Mazet), 2021-2022
 
 vincent.mazet@unistra.fr
 
