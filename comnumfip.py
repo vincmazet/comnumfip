@@ -391,7 +391,7 @@ def rleenc(msg):
     Exemple :
     
     from skimage.io import imread
-    mg = ioimread("image.png")       # Charge l'image image.png
+    mg = imread("image.png")         # Charge l'image image.png
     code = rleenc(img.ravel())       # .ravel() permet de vectoriser l'image
                                      # pour en faire un tableau à une seule dimension
     """
@@ -423,7 +423,7 @@ def rleenc(msg):
 def rledec(code):
 
     """
-    Compression RLE (run length encoding).
+    Décompression RLE (run length encoding).
     
     Entrée :
     code (array) : séquence compressée en RLE
@@ -436,8 +436,7 @@ def rledec(code):
     from numpy import reshape
     msg = rledec(code)               # Effectue la décompression RLE
     img = reshape(msg, (M,N))        # Si c'est une image qui est attendue,
-                                     # transforme la séquence msg en image de taille M×N
-    """
+                                     # transforme la séquence msg en image de taille M×N    """
     
     N = len(code)
     msg = np.array([])
