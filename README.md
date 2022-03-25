@@ -175,6 +175,8 @@ code = rleenc(img.ravel())       # .ravel() permet de vectoriser l'image
 
 ### rledec
 
+`msg = rledec(code)`
+
 Décompression RLE (_run length encoding_).
 
 Entrée :
