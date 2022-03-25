@@ -168,7 +168,7 @@ Exemple :
 
 ```
 from skimage.io import imread
-mg = ioimread("image.png")       # Charge l'image image.png
+img = ioimread("image.png")      # Charge l'image image.png
 code = rleenc(img.ravel())       # .ravel() permet de vectoriser l'image
                                  # pour en faire un tableau à une seule dimension
 ```
