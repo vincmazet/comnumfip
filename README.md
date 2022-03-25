@@ -212,5 +212,5 @@ Sortie :
 ## Licence
 
 Ce programme est distribué sous licence CeCILL-B (www.cecill.info).
-Copyright Université de Strasbourg 2021.
+Copyright Université de Strasbourg 2021-2022.
 Contributeur : vincent.mazet@unistra.fr.
