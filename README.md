@@ -62,7 +62,7 @@ Entrées :
 * **P** (array)   : probabilité des symboles (sa taille correspond à la taille de l'alphabet)
 
 Sortie :
-* **c** (array) : séquence aléatoire M-aire où M = len(P).
+* **c** (array) : séquence aléatoire M-aire où M = len(P). Le LSB est à gauche.
 
 Exemples :
 
